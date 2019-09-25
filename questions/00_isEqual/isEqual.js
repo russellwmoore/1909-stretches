@@ -5,4 +5,6 @@ function isEqual(obj1, obj2) {
   // `jest --watch isEqual`
 }
 
+console.log('hacked');
+
 module.exports = { isEqual };
