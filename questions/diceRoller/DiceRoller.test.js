@@ -29,7 +29,7 @@ describe('Dice Roller', () => {
 
   test('it should output random values', () => {
     const singleDie = new DiceRoller(Number.MAX_SAFE_INTEGER, 1);
-    const anotherSingleDie = new DiceRoller(Number.MIN_SAFE_INTEGER, 1);
+    const anotherSingleDie = new DiceRoller(Number.MAX_SAFE_INTEGER, 1);
     const firstRoll = singleDie.roll();
     const secondRoll = anotherSingleDie.roll();
     expect(firstRoll[0]).not.toEqual(secondRoll[0]);
@@ -47,7 +47,7 @@ describe('Dice Roller', () => {
 
     expect(fiveByThreeDice.history).toEqual(rollHistory);
   });
-
+  //Extra credit below. Remove the 'x' and save to activate this test spec
   xtest('the roll history, number of sides, and number of dice should be private', () => {
     const tenByThree = new DiceRoller(10, 3);
     const rollHistory = [];
