@@ -56,7 +56,7 @@ describe("Cache", () => {
   });
 
   // EXTRA CREDIT
-  xtest("if the returned function is called with the same arguments more than once, then the original callback is not called.", () => {
+  test("if the returned function is called with the same arguments more than once, then the original callback is not called.", () => {
     const adder = (a, b, c) => a + b + c;
     const mockAdd = jest.fn(adder);
     const cachedAdder = cache(mockAdd);
